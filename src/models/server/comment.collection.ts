@@ -16,7 +16,7 @@ export default async function createCommentCollection() {
     // Creating Attributes
     await Promise.all([
         databases.createLongtextAttribute(db, commentCollection, "content",  true),
-        databases.createEnumAttribute(db, commentCollection, "type", ["answer", "question"], true),
+        databases.createEnumAttribute(db, commentCollection, "type", ["answer", "question"], true),//comments can come on the answers or the questions
         databases.createVarcharAttribute(db, commentCollection, "typeId", 50, true),
         databases.createVarcharAttribute(db, commentCollection, "authorId", 50, true),
     ]);
