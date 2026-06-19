@@ -28,6 +28,9 @@ export default async function createQuestionCollection()
         databases.createVarcharAttribute(db,questionCollection,"attachmentId",50,false),
         ]);
     console.log("Question Attributes created")
+    // 2. The "Safety Buffer" (Wait for 2-3 seconds)
+// This prevents the 'attribute_not_available' error
+await new Promise((resolve) => setTimeout(resolve, 3000));
 
     //create Index
 

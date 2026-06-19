@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "seed": "ts-node src/models/server/dbSetup.ts",
     "lint": "eslint"
   },
   "dependencies": {
